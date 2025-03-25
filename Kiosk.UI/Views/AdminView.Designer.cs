@@ -32,6 +32,7 @@
             MenuButton = new Button();
             InventoryButton = new Button();
             AdminContentPanel = new Panel();
+            ProductButton = new Button();
             SuspendLayout();
             // 
             // DashboardButton
@@ -74,11 +75,23 @@
             AdminContentPanel.Size = new Size(1052, 647);
             AdminContentPanel.TabIndex = 3;
             // 
+            // ProductButton
+            // 
+            ProductButton.BackColor = Color.FromArgb(255, 128, 255);
+            ProductButton.Location = new Point(12, 231);
+            ProductButton.Name = "ProductButton";
+            ProductButton.Size = new Size(94, 29);
+            ProductButton.TabIndex = 4;
+            ProductButton.Text = "Menu";
+            ProductButton.UseVisualStyleBackColor = false;
+            ProductButton.Click += ProductButton_Click;
+            // 
             // AdminView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1176, 671);
+            Controls.Add(ProductButton);
             Controls.Add(AdminContentPanel);
             Controls.Add(InventoryButton);
             Controls.Add(MenuButton);
@@ -94,5 +107,6 @@
         public Button MenuButton;
         public Button InventoryButton;
         private Panel AdminContentPanel;
+        public Button ProductButton;
     }
 }

@@ -36,5 +36,10 @@ namespace Kiosk.UI.Views
         {
             _navigationManager.SetNavigation<InventoryUserControl>();
         }
+
+        private void ProductButton_Click(object sender, EventArgs e)
+        {
+            _navigationManager.SetNavigation<ProductListUserControl>();
+        }
     }
 }

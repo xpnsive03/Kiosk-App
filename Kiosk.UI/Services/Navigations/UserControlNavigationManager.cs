@@ -16,7 +16,7 @@ namespace Kiosk.Core.Services.Navigations
         /// <summary>
         /// A dictionary to store instantiated strategies to avoid unnecessary re-creation.
         /// </summary>
-        private readonly Dictionary<Type, IUserControlNavigation> _strategies = new();
+        private readonly Dictionary<Type, IUserControlNavigation> _navigations = new();
 
         /// <summary>
         /// Keeps track of the currently active UserControl to prevent redundant loading.
@@ -43,16 +43,16 @@ namespace Kiosk.Core.Services.Navigations
                 return;
 
             // Check if the strategy for this control type already exists; if not, create and store it.
-            if (!_strategies.ContainsKey(typeof(T)))
+            if (!_navigations.ContainsKey(typeof(T)))
             {
-                _strategies[typeof(T)] = new T();
+                _navigations[typeof(T)] = new T();
             }
 
             // Clear the container before adding the new UserControl.
             _container.Controls.Clear();
 
             // Retrieve the new UserControl from the selected strategy.
-            _currentControl = _strategies[typeof(T)].GetUserControl();
+            _currentControl = _navigations[typeof(T)].GetUserControl();
             _currentControl.Dock = DockStyle.Fill; // Ensure it fills the container.
 
             // Add the new UserControl to the container.
