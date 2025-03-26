@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Kiosk.Core.Services.Navigations;
 using Kiosk.UI.Views.UserControls;
+using MediatR;
 
 namespace Kiosk.UI.Views
 {

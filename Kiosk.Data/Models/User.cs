@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Kiosk.Core.Models
+namespace Kiosk.Data.Models
 {
     public class User
     {

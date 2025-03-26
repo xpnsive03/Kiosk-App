@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Kiosk.Core.Models
+namespace Kiosk.Data.Models
 {
     public class OrderItem
     {

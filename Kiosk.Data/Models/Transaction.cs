@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kiosk.Core.Models
+namespace Kiosk.Data.Models
 {
     public class Transaction
     {
@@ -37,6 +37,10 @@ namespace Kiosk.Core.Models
         [ForeignKey("Product")]
         [Display(Name = "Product ID")]
         public int ProductId { get; set; }
+
+        [Required(ErrorMessage = "Created date is required.")]
+        [Display(Name = "Created At")]
+        public DateTime CreatedAt { get; set; }
         public User User { get; set; }
         public Product Product { get; set; }
     }
